@@ -1,0 +1,4 @@
+# Задание 1
+integer_var = 5  #1
+float_var = 4.6  #2
+string_var = "Goodbye, Mark!"  #3
