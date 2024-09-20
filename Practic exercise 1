@@ -2,3 +2,27 @@
 integer_var = 5  #1
 float_var = 4.6  #2
 string_var = "Goodbye, Mark!"  #3
+list_var = [1,2,3,4]
+tuple_var = (78, "Crate", False, -54)
+dict_var = {1: "23551", "fall": "AASDF"}
+set_var = {456, 124, 125, 345, 756, 365, 7658, 2345, 25, 745, 5743}
+bool_var = False
+print(integer_var, float_var, string_var, list_var, tuple_var, dict_var, set_var, bool_var)
+
+# Задание 2
+name = "Vildan"
+age = 25
+average_grade = 4.8
+favorite_movies = ["The Lord of the Rings", "Blade Runner 2077"]
+personal_info = ("Kashapov", 2077, average_grade)
+skills = {"fall asleep": 5, "run": 8}
+visited_countries = {"Kalimdor", "Azeroth", "Cairn"}
+has_driver_license = True
+print(personal_info)
+
+# Задание 3 
+my_pc = "AMD Ryzen 5..."
+RAM = 16384
+net_speed = 698.56
+all_info = [my_pc, RAM, net_speed]
+print(all_info)
