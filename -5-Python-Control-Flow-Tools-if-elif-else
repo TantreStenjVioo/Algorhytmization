@@ -78,3 +78,50 @@ if n // k:
     print("Число n кратно k")
 else:
     print("Число n не кратно k")
+
+# Задание 8
+lvl = int(input("Введите уровень персонажа:"))
+hp = int(input("Введите количество его здоровья:"))
+if lvl < 5 and lvl > 0:
+    print("Ваш уровень слишком низкий для выполнения миссии.")
+elif lvl >= 5:
+        if hp > 50 and hp <= 100:
+            print("Вы готовы к миссии!")
+        if hp >= 20 and hp <= 50:
+            print("Ваше здоровье низкое, будьте осторожны.")
+        if hp < 20:
+            print("Ваше здоровье слишком низкое для выполнения миссии.")
+        if hp <= 0 or hp > 100:
+            print("Некорректные данные.")
+else:
+    print("Некорректные данные.")
+
+# Задание 9
+inv = ["яблоко", "шариковая ручка", "фонарь"]
+
+if "ключ" in inv and "фонарь" in inv:
+    print("Вы можете пройти через дверь.")
+elif "фонарь" in inv and "ключ" not in inv:
+    print("У вас нет ключа, вы не можете открыть дверь.")
+elif "ключ" in inv and "фонарь" not in inv:
+    print("У вас нет фонаря, слишком темно, чтобы пройти.")
+else:
+    print("У вас нет ни ключа, ни фонаря, вы не можете пройти через дверь.")
+
+#  Задание 10
+king = "Enemies are coming! Are the archers ready?"
+warrior = "For the Alliance!"
+magician = "The spell is ready."
+
+if "." in magician:
+    print("Ok")
+else:
+    print("Not ok")
+if "?" in warrior:
+    print("Ok")
+else:
+    print("Not ok")
+if "!" in king and "?" in king:
+    print("Ok")
+else:
+    print("Not ok")
