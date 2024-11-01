@@ -10,3 +10,19 @@ for p in range(steps):
     print(phrase)
 
 #Задание 3
+stations = ["Малиновка", "Рябиновка", "Суслово", "Дрожжино", "Звягино"]
+for s in stations:
+    if s == stations[-1]:
+        print(f"Поезд на станции: {s} - Конечная")
+    else:
+        print(f"Поезд на станции: {s}")
+
+#Задание 4
+shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
+for item in shop:
+    if item == "Laptop":
+        print("I'm buying this.")
+    else:
+        print("I don't need it.")
+
+#Задание 5
