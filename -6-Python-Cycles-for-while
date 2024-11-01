@@ -1,0 +1,12 @@
+#Задание 1
+names = ["Richard", "Igor", "Jonathan", "Alice", "Mary", "Bonnie"]
+for n in names:
+    print("Hello",n,"!")
+
+#Задание 2
+phrase = "I'm learning cycles."
+steps = 10
+for p in range(steps):
+    print(phrase)
+
+#Задание 3
