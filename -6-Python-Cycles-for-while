@@ -34,12 +34,66 @@ for index, t in enumerate(tasks, start=1):
         print(f"{index}: {t}")
 
 # Задание 6
-nums = int(input("Введите количество чисел:")
+num = int(input("Введите количество чисел:"))
 
 numbers = []
 sum = 0
 
-for x in range(nums):
-    N = int(input(f"Введите число {i+1}:"))
-    numbers.append(number)
-///////////
+for x in range(num):
+    N = int(input(f"Введите число: "))
+    numbers.append(N)
+    sum += N
+print("Список всех введённых чисел:", numbers)
+print("Сумма всех чисел:", sum)
+
+# Задание 7
+start = 1
+while start <= 10:
+    print(f"Цикл сработал {start}")
+    start += 1
+
+# Задание 8
+while True:
+    com = input("Введите команду (w - прямо, a - влево, s - назад, d - вправо, stop - выйти): ")
+
+    if com == "w":
+        print("Персонаж идет прямо.")
+    elif com == "s":
+        print("Персонаж идет назад.")
+    elif com == "a":
+        print("Персонаж идет влево.")
+    elif com == "d":
+        print("Персонаж идет вправо.")
+    elif com == "stop":
+        print("Программа остановлена.")
+        break
+    else:
+        print("Неизвестная команда! Попробуйте снова.")
+
+# Задание 9
+while True:
+    num = int(input("Введите число от 1 до 9: "))
+    if 1 <= num <= 9:
+        break
+    elif num < 1 or num > 9:
+        print("Число вне диапазона. Попробуйте снова.")
+
+print(f"Таблица умножения для числа {num}:")
+for x in range(1, 11):
+    res = num * x
+    print(f"{num} * {x} = {res}")
+
+# Задание 10
+count = 3
+answer = "календарь"
+print("Загадка: Сам дней не знает, а другим указывает.")
+while count > 0:
+    ans = input("Ваш ответ: ")
+    if ans == answer:
+        print("Поздравляем! Вы угадали!")
+        break
+    else:
+        count -= 1
+        print(f"Неправильный ответ. У вас осталось {count} попыток.")
+if count == 0:
+    print("Загадка не разгадана.")
