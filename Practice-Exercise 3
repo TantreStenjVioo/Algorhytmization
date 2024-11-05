@@ -1,0 +1,22 @@
+#Задание 1
+minutes = int(input("Введите количество минут: "))
+hours = minutes // 60
+mins = minutes % 60
+print(f"{hours} час(ов) {mins} минут(а)")
+
+#Задание 2
+a = 8
+b = 15
+h = int(input("Сколько часов спит Аня: "))
+if h == a:
+    print("Это нормально.")
+elif h < a:
+    print("Недосып.")
+elif h > b:
+    print("Пересып.")
+
+#Задание 3
+import math
+a = int(input("Введите сторону треугольника а: "))
+b = int(input("Введите сторону треугольника b: "))
+c = int(input("Введите сторону треугольника c: "))
