@@ -16,7 +16,34 @@ elif h > b:
     print("Пересып.")
 
 #Задание 3
-import math
 a = int(input("Введите сторону треугольника а: "))
 b = int(input("Введите сторону треугольника b: "))
 c = int(input("Введите сторону треугольника c: "))
+P = 0.5 * (a + b + c)
+print(pow((P * (P - a) * (P - b) * (P - c)), 0.5))
+
+#Задание 4
+Fig = input("Введите тип фигуры(треугольник, прямоугольник, круг): ")
+if Fig == "прямоугольник":
+    a = int(input("Сторона a: "))
+    b = int(input("Сторона b: "))
+    print(a * b)
+elif Fig == "треугольник":
+    a = int(input("Сторона a: "))
+    h = int(input("Высота h: "))
+    print(0.5 * a * h)
+elif Fig == "круг":
+    r = int(input("Радиус r: "))
+    pi = 3.14
+    print(pi * r ** 2)
+else:
+    print("Ошибка, введите нужную фигуру")
+
+#Задание 5
+Prog = int(input("Введите количество программистов: "))
+if Prog % 10 == 1 and Prog != 11 and Prog != 111 and Prog != 211 and Prog != 311 and Prog != 411 and Prog != 511 and Prog != 611 and Prog != 711 and Prog != 811 and Prog != 911:
+    print(Prog,"программист")
+elif Prog % 10 == 2 and Prog % 10 == 3 Prog % 10 == 4  :
+    print(Prog,"программиста")
+else:
+    print(Prog, "программистов")
