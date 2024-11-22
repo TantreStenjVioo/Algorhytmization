@@ -55,18 +55,66 @@ def number_change(input_number, output_number):
     while input_number != output_number:
         if input_number < output_number:
             input_number += 1
-            count += 1
         elif input_number > output_number:
             input_number -= 1
-            count += 1
-        elif input_number == output_number:
-            return count
-        else:
-            print("Error")
+        count += 1
+    return (count, input_number, output_number)
 
 input_number = int(input("Начальное значение: "))
 output_number = int(input("Конечное значение: "))
 
-number_change(input_number, output_number)
+result = number_change(input_number, output_number)
 
-print(count, input_number, output_number)
+print(result)
+
+#Задание 5
+player = 0
+
+def info_player():
+    print(f"Игрок пробежал {player} км.")
+
+def run_player(km):
+    global player
+    player += km / 2
+
+info_player()
+run_player(40)
+run_player(15.5)
+info_player()
+
+#Задание 6 
+def info_number(number: float) -> str:
+    """
+    Выводит информацию о числах с плавающей запятой.
+
+    Функция определяет:
+    - Делится ли на 10 без остатка.
+    - Является ли число чётным или нечётным.
+
+    Параметры:
+    number (float): Число с плавающей запятой.
+
+    Возвращает:
+    str: Строка с информацией о числе, его чётности и какие цифры стоят после запятой.
+    Если число меньше или равно нулю, возвращает сообщение об ошибке.
+    """
+
+    if number <= 0:
+        return "Ошибка. Число меньше или равно нулю."
+
+    if number % 2 == 0:
+        even = True
+    else:
+        even = False
+
+    if number % 10 == 0:
+        yes = True
+    else:
+        yes = False
+
+    return f"Число: {number}\nЧётное: {even}\nДелится без остатка на 10: {yes}"
+
+print(info_number.__doc__)
+print(info_number(28.133))
+print(info_number(-2))
+
