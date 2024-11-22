@@ -27,12 +27,46 @@ switch_check(switch_2)
 
 #Задание 3
 def tri(a, b, c):
-    if a == b == c:
-        print("авност")
+    if a + b > c and a + c > b and b + c > a:
+        if a == b == c:
+            print(f"Длина сторон треугольника: {a}, {b}, {c}. Равносторонний треугольник")
+        elif a == b and a != c and b != c:
+            print(f"Длина сторон треугольника: {a}, {b}, {c}. Равнобедренный треугольник")
+        else:
+            print(f"Длина сторон треугольника: {a}, {b}, {c}. Разносторонний треугольник")
     else:
-        print("err")
+        print("Некорректные стороны. Невозможно построить треугольник.")
 
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
 
-a = 5
-b = 5
-c = 5
+tri(a, b, c)
+per = a + b + c
+pol = per / 2
+s = (pol * (pol - a) * (pol - b) * (pol - c)) ** 0.5
+
+print("Периметр: ", per)
+print("Площадь: ", s)
+
+#Задание 4 
+def number_change(input_number, output_number):
+    count = 0
+    while input_number != output_number:
+        if input_number < output_number:
+            input_number += 1
+            count += 1
+        elif input_number > output_number:
+            input_number -= 1
+            count += 1
+        elif input_number == output_number:
+            return count
+        else:
+            print("Error")
+
+input_number = int(input("Начальное значение: "))
+output_number = int(input("Конечное значение: "))
+
+number_change(input_number, output_number)
+
+print(count, input_number, output_number)
